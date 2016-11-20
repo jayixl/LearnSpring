@@ -2,9 +2,8 @@ package jay.learning.s2;
 
 import static org.junit.Assert.*;
 
-import jay.learning.s2.CDPlayerConfig;
-import jay.learning.s2.CompactDisc;
-import jay.learning.s2.MediaPlayer;
+import jay.learning.s2.config.CDPlayerConfig;
+import jay.learning.s2.config.ExplicitCDPlayerConfig;
 import org.junit.Rule;
 import org.junit.Test;
 //import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
@@ -15,7 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
+@ContextConfiguration(classes= ExplicitCDPlayerConfig.class)
 public class CDPlayerTest {
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -24,6 +23,7 @@ public class CDPlayerTest {
     private MediaPlayer player;
     @Autowired
     private CompactDisc cd;
+
     @Test
     public void cdShouldNotBeNull() {
         assertNotNull(cd);
