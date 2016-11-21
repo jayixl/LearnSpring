@@ -4,7 +4,9 @@ import jay.learning.s2.CDPlayer;
 import jay.learning.s2.CompactDisc;
 import jay.learning.s2.SgtPeppers;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class ExplicitCDPlayerConfig {
 
     @Bean(name="lonelyHeartsClubBand")

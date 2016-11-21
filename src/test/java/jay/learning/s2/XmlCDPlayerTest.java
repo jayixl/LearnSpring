@@ -2,8 +2,6 @@ package jay.learning.s2;
 
 import static org.junit.Assert.*;
 
-import jay.learning.s2.config.ExplicitCDPlayerConfig;
-import jay.learning.s2.config.MixedCDPlayerConfig;
 import org.junit.Rule;
 import org.junit.Test;
 //import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
@@ -14,9 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes= ExplicitCDPlayerConfig.class)
-@ContextConfiguration(classes= MixedCDPlayerConfig.class)
-public class CDPlayerTest {
+@ContextConfiguration("classpath:/config/CDPlayerConfig.xml")
+public class XmlCDPlayerTest {
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 

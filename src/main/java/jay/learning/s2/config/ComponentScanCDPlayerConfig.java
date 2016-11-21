@@ -6,5 +6,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackageClasses = App.class)
-public class CDPlayerConfig {
+public class ComponentScanCDPlayerConfig {
 }
